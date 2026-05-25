@@ -14,6 +14,7 @@ async def run_tech_agent(idea: str) -> dict:
         {"role": "user", "content": TECH_USER_PROMPT.format(idea=idea)},
     ]
 
+    print("TECH AGENT RUNNING...")
     while True:
         response = await client.chat.completions.create(
             model=GROQ_LLM_MODEL,
@@ -32,6 +33,7 @@ async def run_tech_agent(idea: str) -> dict:
         tool_used = True
         messages.append(msg)  # assistant message containing tool_calls
 
+        print("SEARCHING WEB...")
         for tc in msg.tool_calls:
             args = json.loads(tc.function.arguments)
             result = await tavily_search(

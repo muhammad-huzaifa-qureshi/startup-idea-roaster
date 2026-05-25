@@ -18,6 +18,7 @@ async def run_market_agent(idea: str) -> dict:
     ]
 
     # Initial analysis
+    print("MARKET AGENT RUNNING (1)...")
     response = await client.chat.completions.create(
         model=GROQ_LLM_MODEL,
         messages=messages,
@@ -28,6 +29,7 @@ async def run_market_agent(idea: str) -> dict:
 
     # Reflection loop — critique and revise N times
     for i in range(REFLECTION_ROUNDS):
+        print(f"MARKET AGENT RUNNING ({i+2})...")
         messages.append({"role": "assistant", "content": current_output})
         messages.append({"role": "user", "content": MARKET_REFLECT_PROMPT})
 

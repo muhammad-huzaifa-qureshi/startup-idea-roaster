@@ -7,6 +7,7 @@ client = AsyncGroq(api_key=GROQ_API_KEY)
 
 
 async def run_business_agent(idea: str) -> dict:
+    print("BUSINESS AGENT RUNNING...")
     response = await client.chat.completions.create(
         model=GROQ_LLM_MODEL,
         messages=[

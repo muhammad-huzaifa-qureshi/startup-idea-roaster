@@ -24,14 +24,17 @@ class RoastRequest(BaseModel):
 @router.post("/roast")
 async def roast_idea(request: RoastRequest):
     # Run all 3 agents in parallel
+    print("CALLING ALL 3 AGENTS IN PARALLEL...")
     market_result, business_result, tech_result = await asyncio.gather(
         run_market_agent(request.idea),
         run_business_agent(request.idea),
         run_tech_agent(request.idea),
     )
 
+    print("CALCULATING SCORE...")
     survival_score = _calculate_score(market_result, business_result, tech_result)
 
+    print("BUILDING VERDICT...")
     final_verdict = _build_verdict(
         market_result, business_result, tech_result, survival_score
     )
@@ -46,6 +49,7 @@ async def roast_idea(request: RoastRequest):
         "tool_used_by_agent": tech_result.get("tool_used", False),
     }
 
+    print("WRITING TO DATABASE...")
     # Persist to MongoDB
     db = get_db()
     await db[COLLECTION_ROASTS].insert_one({**result})

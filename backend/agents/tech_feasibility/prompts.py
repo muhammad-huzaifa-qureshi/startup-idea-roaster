@@ -10,7 +10,7 @@ Output ONLY valid JSON (no markdown, no explanation outside JSON):
   "roast": "Your brutal technical roast here (2-4 sentences)",
   "summary": "One-line tech verdict",
   "score": <integer 1-10>,
-  "tool_used": <true or false>
+  "tool_used": <true if you used web or false if you did not>
 }
 """
 

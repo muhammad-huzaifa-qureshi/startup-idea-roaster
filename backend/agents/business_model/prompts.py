@@ -16,7 +16,7 @@ Step 5 - Profitability Path: Is there a realistic path to profit, or just VC dep
 
 After completing all steps, synthesize your findings into a brutal business roast.
 
-Output ONLY valid JSON (no markdown, no explanation outside JSON):
+Output ONLY valid JSON (no markdown, no explanation outside JSON). Please don't output internal steps, only a valid JSON needed:
 
 {
  "roast": "Your brutal business model roast here (2-4 sentences)",

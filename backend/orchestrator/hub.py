@@ -82,4 +82,4 @@ def _build_verdict(market, business, tech, score) -> str:
     else:
         verdict = "VIABLE - Still has rough edges though"
 
-    return f"[Score: {score}/10] {verdict}. Market: {market.get('summary', '')} | Business: {business.get('summary', '')} | Tech: {tech.get('summary', '')}"
+    return f"Score: {score}/10\n{verdict}.\nMarket: {market.get('summary', '')}\nBusiness: {business.get('summary', '')}\nTech: {tech.get('summary', '')}"

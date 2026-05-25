@@ -1,8 +1,6 @@
 import httpx
 from config import TAVILY_API_KEY
-
-TAVILY_URL = "https://api.tavily.com/search"
-
+from constants import TAVILY_URL
 
 async def tavily_search(query: str, max_results: int = 3) -> str:
     """Search web via Tavily and return formatted results string."""

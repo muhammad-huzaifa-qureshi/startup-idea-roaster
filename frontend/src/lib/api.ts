@@ -1,4 +1,4 @@
-import { API_ENDPOINTS, BackendMode, BACKEND_MODES } from "@/constants";
+import { API_ENDPOINTS, BackendMode, BACKEND_MODES } from "@/constants/constants";
 
 
 export interface RoastResult {

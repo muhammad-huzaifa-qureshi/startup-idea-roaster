@@ -55,3 +55,4 @@ TODO
 - DB Schema
 - OUTPUT Schema of all agents, final output
 - input Schema
+- screenshots

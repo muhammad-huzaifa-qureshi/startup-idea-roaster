@@ -1,4 +1,4 @@
-import { BackendMode, BACKEND_MODES } from "@/constants";
+import { BackendMode, BACKEND_MODES } from "@/constants/constants";
 
 interface Props {
     mode: BackendMode;

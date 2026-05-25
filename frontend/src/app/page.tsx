@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { submitRoast, fetchHistory, RoastResult } from "@/lib/api";
-import { BackendMode, MIN_IDEA_LENGTH } from "@/constants";
+import { BackendMode, MIN_IDEA_LENGTH } from "@/constants/constants";
 import { DEFAULT_BACKEND } from "@/config/backend";
 import RoastCard from "@/components/RoastCard";
 import HistoryPanel from "@/components/HistoryPanel";

@@ -1,7 +1,8 @@
 fastapi
-uvicorn
-groq
-pymongo
+uvicorn[standard]
 motor
-tavily-python
+groq
+httpx
 python-dotenv
+pydantic
+tavily-python

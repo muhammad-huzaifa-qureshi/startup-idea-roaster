@@ -1,6 +1,6 @@
 export const API_ENDPOINTS = {
-    FASTAPI: process.env.NEXT_PUBLIC_FASTAPI_URL || "http://localhost:8000/api",
-    N8N: process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || "https://your-n8n-instance.com/webhook/startuproaster",
+    FASTAPI: process.env.NEXT_PUBLIC_FASTAPI_URL,
+    N8N: process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL,
 };
 export const BACKEND_MODES = {
     FASTAPI: "fastapi",

@@ -25,11 +25,13 @@ export async function submitRoast(
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ idea }),
     });
+    const data = await res.json();
+
     if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.detail || "Request failed");
+        throw new Error(data.detail || "Request failed");
     }
-    return res.json();
+
+    return Array.isArray(data) ? data[0] : data; // unwrap n8n array
 }
 
 

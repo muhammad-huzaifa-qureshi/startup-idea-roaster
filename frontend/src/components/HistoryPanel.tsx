@@ -17,7 +17,7 @@ export default function HistoryPanel({ items }: { items: RoastResult[] }) {
                     className="w-full max-w-full bg-gray-900 border border-gray-800 rounded-xl p-4 hover:border-gray-700 transition overflow-hidden"
                 >
                     {/* Idea */}
-                    <p className="text-xs text-gray-500 mb-2 wrap-break-word line-clamp-2">
+                    <p className="text-xs text-gray-500 mb-2 wrap-break-word">
                         {item.idea}
                     </p>
 

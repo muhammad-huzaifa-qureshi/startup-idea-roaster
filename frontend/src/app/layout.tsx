@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Startup Idea Raoster",
+  title: "Startup Idea Roaster",
   description: "by Huzaifa Qureshi",
 };
 

@@ -72,7 +72,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mt-4">
             <span className="text-xs text-gray-500">
-              {idea.length} characters
+              {idea.length} characters (min. char: 50)
             </span>
 
             <button
@@ -111,6 +111,11 @@ export default function Home() {
           {showHistory && <HistoryPanel items={history} />}
         </div>
       </div>
+      
+      {/* Copyright */}
+      <footer className="sticky bottom-0 mt-16 py-4 text-center text-gray-600 text-xs backdrop-blur-sm">
+        © {new Date().getFullYear()} Muhammad Huzaifa Qureshi. All rights reserved.
+      </footer>
     </main>
   );
 }

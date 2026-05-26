@@ -1,6 +1,7 @@
 import json
 from groq import AsyncGroq
-from config import GROQ_API_KEY, GROQ_LLM_MODEL
+from config import GROQ_API_KEY
+from constants import GROQ_LLM_MODEL
 from agents.market_demand.prompts import (
     MARKET_SYSTEM_PROMPT,
     MARKET_USER_PROMPT,

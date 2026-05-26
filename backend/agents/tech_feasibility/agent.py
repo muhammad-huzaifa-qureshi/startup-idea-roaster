@@ -1,6 +1,7 @@
 import json
 from groq import AsyncGroq
-from config import GROQ_API_KEY, GROQ_LLM_MODEL
+from config import GROQ_API_KEY
+from constants import GROQ_LLM_MODEL
 from agents.tech_feasibility.prompts import TECH_SYSTEM_PROMPT, TECH_USER_PROMPT
 from agents.tech_feasibility.tools import tavily_search, TOOL_SCHEMAS
 

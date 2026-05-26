@@ -1,6 +1,7 @@
 import json
 from groq import AsyncGroq
-from config import GROQ_API_KEY, GROQ_LLM_MODEL
+from config import GROQ_API_KEY
+from constants import GROQ_LLM_MODEL
 from agents.business_model.prompts import BUSINESS_SYSTEM_PROMPT, BUSINESS_USER_PROMPT
 
 client = AsyncGroq(api_key=GROQ_API_KEY)

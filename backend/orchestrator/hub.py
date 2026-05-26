@@ -1,7 +1,7 @@
 import asyncio
 from fastapi import APIRouter
 from pydantic import BaseModel, field_validator
-from constants import MIN_IDEA_LENGTH, COLLECTION_ROASTS
+from constants import MIN_IDEA_LENGTH, COLLECTION_ROASTS, HISTORY_FETCH_LIMIT
 from database import get_db
 from agents.market_demand.agent import run_market_agent
 from agents.business_model.agent import run_business_agent
@@ -58,7 +58,7 @@ async def roast_idea(request: RoastRequest):
 
 
 @router.get("/history")
-async def get_history(limit: int = 20):
+async def get_history(limit: int = HISTORY_FETCH_LIMIT):
     db = get_db()
     cursor = db[COLLECTION_ROASTS].find({}, {"_id": 0}).sort("_id", -1).limit(limit)
 

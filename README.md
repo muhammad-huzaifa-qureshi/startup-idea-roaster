@@ -1,6 +1,6 @@
 # Startup Idea Roaster
 A system where specialized AI roast agents brutally evaluate startup ideas from market demand, business viability, and technical feasibility perspectives. Instead of politely validating ideas, the system intentionally critiques weaknesses, unrealistic assumptions, and hidden risks before the orchestrator delivers a final startup survival verdict.
-> Semester Project for Generative AI Course
+
 ## Agents Workflow
 ![Workflow](/images/agents-worflow.jpg)
 ## Why Multi-Agent Architecture?

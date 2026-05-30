@@ -4,6 +4,7 @@ from constants import TAVILY_URL
 
 async def tavily_search(query: str, max_results: int = 3) -> str:
     """Search web via Tavily and return formatted results string."""
+    print(f"SEARCHING WEB => {query}...")
     async with httpx.AsyncClient() as client:
         resp = await client.post(
             TAVILY_URL,

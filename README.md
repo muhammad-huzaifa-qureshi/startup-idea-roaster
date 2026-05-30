@@ -13,8 +13,8 @@ This system separates evaluation into specialized agents:
 
 This creates more focused, adversarial, and explainable critiques.
 ## Tech Stack
-- **Frontend**: Next.js + Tailwind CSS
-- **Backend**: FastAPI + Motor (async MongoDB)
+- **Frontend**: Next.js + TypeScript + Tailwind CSS
+- **Backend**: FastAPI
 - **LLM**: Groq (llama-3.1-8b-instant)
 - **Search Tool**: Tavily (used by Tech agent - ReAct pattern)
 - **DB**: MongoDB
@@ -49,7 +49,7 @@ npm run dev
 Toggle between FastAPI and N8N in the UI or change `DEFAULT_BACKEND` in
 `frontend/src/config/backend.ts`.
 ## Schema
-### Input Schema
+### Request Schema
 ```json
 {
   "idea": "string"
@@ -81,7 +81,7 @@ Toggle between FastAPI and N8N in the UI or change `DEFAULT_BACKEND` in
   "tool_used": "boolean"
 }
 ```
-### Final Output
+### Response Schema
 ```json
 {
   "idea": "string",
@@ -107,7 +107,7 @@ Toggle between FastAPI and N8N in the UI or change `DEFAULT_BACKEND` in
 ```
 > MongoDB stores the final output as-is; one document per roast request.
 ## Screenshots
-![Empty State](/images/1.jpg)
+![Initial State](/images/1.jpg)
 ![Guard Testing](/images/2.jpg)
 ![Roasts](/images/3.jpg)
 ![Verdict](/images/4.jpg)

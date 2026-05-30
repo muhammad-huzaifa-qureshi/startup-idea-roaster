@@ -41,5 +41,5 @@ async def guard_check(idea: str) -> None:
     if not result.get("valid", True):
         raise HTTPException(
             status_code=400,
-            detail=f"Invalid input: {result.get('reason', 'Not a startup idea')}",
+            detail=f"PLEASE ENTER A VALID STARTUP IDEA! {result.get('reason', 'Not a startup idea')}",
         )

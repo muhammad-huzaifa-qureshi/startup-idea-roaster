@@ -1,6 +1,7 @@
 import asyncio
 from fastapi import APIRouter
 from pydantic import BaseModel, field_validator
+from orchestrator.guard import guard_check
 from constants import MIN_IDEA_LENGTH, COLLECTION_ROASTS, HISTORY_FETCH_LIMIT
 from database import get_db
 from agents.market_demand.agent import run_market_agent
@@ -23,6 +24,7 @@ class RoastRequest(BaseModel):
 
 @router.post("/roast")
 async def roast_idea(request: RoastRequest):
+    await guard_check(request.idea)
     # Run all 3 agents in parallel
     print("CALLING ALL 3 AGENTS IN PARALLEL...")
     market_result, business_result, tech_result = await asyncio.gather(

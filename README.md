@@ -107,7 +107,8 @@ Toggle between FastAPI and N8N in the UI or change `DEFAULT_BACKEND` in
 ```
 > MongoDB stores the final output as-is; one document per roast request.
 ## Screenshots
-![1st Image](/images/1.jpg)
-![2nd Image](/images/2.jpg)
-![3rd Image](/images/3.jpg)
-![4th Image](/images/4.jpg)
+![Empty State](/images/1.jpg)
+![Guard Testing](/images/2.jpg)
+![Roasts](/images/3.jpg)
+![Verdict](/images/4.jpg)
+![Mobile view with History](/images/5.jpg)

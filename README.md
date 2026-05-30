@@ -112,3 +112,5 @@ Toggle between FastAPI and N8N in the UI or change `DEFAULT_BACKEND` in
 ![Roasts](/images/3.jpg)
 ![Verdict](/images/4.jpg)
 ![Mobile view with History](/images/5.jpg)
+---
+© Muhammad Huzaifa Qureshi. All rights reserved.

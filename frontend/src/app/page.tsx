@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchHistory(mode).then(setHistory);
-  }, [mode, result]);
+  }, [result]);
 
   const handleSubmit = async () => {
     if (idea.trim().length < MIN_IDEA_LENGTH) {

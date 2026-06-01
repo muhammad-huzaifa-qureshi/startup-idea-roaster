@@ -17,7 +17,7 @@ export default function Home() {
   const [showHistory, setShowHistory] = useState(false);
 
   useEffect(() => {
-    fetchHistory(mode).then(setHistory);
+    fetchHistory().then(setHistory);
   }, [result]);
 
   const handleSubmit = async () => {

@@ -35,9 +35,8 @@ export async function submitRoast(
 }
 
 
-export async function fetchHistory(mode: BackendMode): Promise<RoastResult[]> {
+export async function fetchHistory(): Promise<RoastResult[]> {
     // N8N doesn't expose history
-    if (mode === BACKEND_MODES.N8N) return [];
     const res = await fetch(`${API_ENDPOINTS.FASTAPI}/history`);
     if (!res.ok) return [];
     return res.json();
